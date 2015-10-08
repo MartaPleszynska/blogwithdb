@@ -1,4 +1,6 @@
 <?php
+include "connection.php";
+
 if ($pagecontent == "home"){
   $mytitle = "Welcome to Marta's Blog
   <p>Thoughts and notes of a Mayden Academy Trainee</p>";
@@ -26,8 +28,9 @@ if ($pagecontent == "post"){
 else {
   $mytitlediv = "<div class='mytitle " . $titleclassname . "'>" . $mytitle . "</div>";
 }
-$dir = '_posts/';
-$posts = scandir($dir);
-arsort($posts);
-$index = count($posts)-1;
+// $dir = '_posts/';
+// $posts = scandir($dir);
+// arsort($posts);
+// $index = count($posts)-1;
+
 ?>

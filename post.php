@@ -1,17 +1,24 @@
 <?php
-
-$postno = $_GET['postno'];
-if($postno == NULL){
-  $postno = "2015-09-26";
+$postid = $_GET['postid'];
+if($postid == NULL){
+  $postid = 1;
 }
-include "_posts/{$postno}.php";
+include "connection.php";
+
+$sql = "SELECT id, title, author, date_published, content FROM posts WHERE id=$postid;";
+
+$result = $conn->query($sql);
+if (!$result){
+  echo $conn->error . ' Your sql was: ' . $sql;
+}
+
+$row = $result->fetch_assoc();
+
+$myposttitle = $row['title'];
+$mypostauthor = $row['author'];
+$mypostdate = $row['date_published'];
+$mypostcontent = $row['content'];
 
 $pagecontent = "post";
 
 include "_layouts/default.inc" ?>
-<!-- /*
-This to put in in div with class="mytitle" in header
-"Welcome to Marta's Blog
-<p>Thoughts and notes of a Mayden Academy Trainee</p>"
-
-layout: default */ -->

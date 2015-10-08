@@ -10,5 +10,5 @@
     <div class="excerpt" ><?php echo $mypostcontent ?></div>
   </article>
   <span>...</span>
-  <a class="readmorebtn" href="post.php?postno=<?php echo $postno;?>">Read More</a>
+  <a class="readmorebtn" href="post.php?postid=<?php echo $postid?>">Read More</a>
 </div>
