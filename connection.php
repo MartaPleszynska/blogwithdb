@@ -1,8 +1,8 @@
 <?php
-$servername = "dynamic-mjpblog.rhcloud.com";
-$username = "admintuB1xCe";
-$password = "z6_DEFwzFGQj";
-$database = "dynamic";
+$servername = "192.168.20.56";
+$username = "root";
+$password = "";
+$database = "mjpblog";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -10,5 +10,4 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 }
-$mysql_host = getenv("OPENSHIFT_MYSQL_DB_HOST");
 ?>
