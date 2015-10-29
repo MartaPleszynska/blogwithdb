@@ -11,101 +11,86 @@ $mypostcontent = " ?>
 PHP stands for Hypertext Preprocessor. It a widely used, open source scripting language. PHP is executed on a server and can generate dynamic page content. PHP file can contain etxt and PHP Code as well a HTML, CSS and JavaScript. It runs on various platforms.
 </p>
 
+<p>
 Basic syntax:
-<?php
-	//This is a PHP single-line comment
-	/* This is a PHP
-	multiple-lines comment
- */
-$variable = “something”; // variable starts with the $ sign
-echo “This will output data on the screen”;
-print “This will also output data on the screen”;
-const value = “This variable does not change”;
-if ( condition1) {
-	echo “True”;	// code executed if condition1 is true
-}
-elseif (condition2) {
-	echo “Condition one is false but condition two is true”; // code to execute is condition1 is false
-}
-else {
-	echo “False”;	// code executed if condition one and two are false
-}
+</p>
+<img class="halfsize"src = "img/phpcode.png" alt ="php code">
 
-switch (case_id) {
-	case label_1:
-		// code to be executed if case_id is label_1;
-		break;
-	case label_2:
-		// code to be executed if case_id is label_2;
-		break;
-	case label_3:
-		// code to be executed if case_id is label_3;
-		break;
-	…
-default:
-	// code to be executed if the case_id does not match any labels;
-}
+<p>
+“In PHP, all keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are NOT case-sensitive.” <a href="http:\/\/www.w3schools.com/php/">(w3schools)</a><br>
+PHP statement si anything that is an executable line and it ends with semicolon (;)<br>
+White spaces (spaces, tabs, blank lines) do not matter to PHP interpreter, it ignores it completely but using white space properly improves readability of the code.
+</p>
 
-while (condition is true) {
-	// execute this code
-}
+<ul class="list">Variable Scope:
+<li>local - declared inside a function</li>
+<li>global - declared outside of function</li>
+<li>static - local variable that is not deleted and kept for further ‘jobs’; can be called without creating an instance</li>
+</ul>
 
-do {
-	// some code to be executed
-} while (condition is true);
+<ul class="list">Difference between ‘echo’ and ‘print’:
+<li><code>echo</code>does not return any value and it cannot be used in expressions but it can take multiple parameters;</li>
+<li><code>print</code>does return 1 and it can be used in expressions but can only take one argument;</li>
+</ul>
 
+<p>
+Data types: string, integer, float, boolean, array, object, NULL, resource<br>
+Variable of type  NULL is a variable that has no assigned value to it.<br>
+Reference type is the storing reference of functions and resources external to PHP (data call)<br>
+</p>
 
-?>
-
-“In PHP, all keywords (e.g. if, else, while, echo, etc.), classes, functions, and user-defined functions are NOT case-sensitive.” (w3schools)
-
-
-Variable Scope:
-local - declared inside a function
-global - declared outside of function
-static - local variable that is not deleted and kept for further ‘jobs’; can be called without creating an instance
-
-Difference between ‘echo’ and ‘print’:
-‘echo’ does not return any value and it cannot be used in expressions but it can take multiple parameters;
-‘print’ does return 1 and it can be used in expressions but can only take one argument;
-
-Data types: string, integer, float, boolean, array, object, NULL, resource
-Variable of type  NULL is a variable that has no assigned value to it.
-Reference type is the storing reference of functions and resources external to PHP (data call)
-
-String functions:
-strlen(“string)”; - returns length of a string
-str_word_count(); - counts the number of words;
-strrev(); - returns reverse string;
-substr(); returns a piece of a string;
-strpos(“where(haystack)”, “what(needle)“); - returns a position of a character of the first match;
-str_replace(“what”, “with what”, “where”); - replaces some characters with other characters;
-strtoupper(); - changes string to all uppercase letters;
-strtolower(); - changes the string to all lower case letters
-
-Constant is a variable that does not change and it can be defined in two ways:
-const name = value;
-	const message_one = “This variable does not change”;
-or
-define (name, value, case-sensitive);
-	define (“message_two”, “This variable also does not change and is case sensitive”);
-	define (“message_three”, “This variable also does not change but is not case sensitive”, true);
-
-Operators:
-Arithmetic: + , - , * , / , % , **
-Assignment: = , += , -= , *= , /= , %=
-Comparison: equal == , identical === , not equal != or <> , not identical !== , > , >= , < , <=
+<ul class="list">String functions:
+<li><code>strlen(“string)”;</code> - returns length of a string</li>
+<li><code>str_word_count();</code> - counts the number of words;</li>
+<li><code>strrev();</code> - returns reverse string;</li>
+<li><code>substr();</code> - returns a piece of a string;</li>
+<li><code>strpos(“where(haystack)”, “what(needle)“);</code> - returns a position of a character of the first match;</li>
+<li><code>str_replace(“what”, “with what”, “where”);</code> - replaces some characters with other characters;</li>
+<li><code>strtoupper();</code> - changes string to all uppercase letters;</li>
+<li><code>strtolower();</code> - changes the string to all lower case letters</li>
+</ul>
+<p>
+Constant is a variable that does not change and it can be defined in two ways:<br>
+<code>const name = value;<br>
+const message_one = “This variable does not change”;<br>
+</code>
+or<br>
+<code>
+define (name, value, case-sensitive);<br>
+define (“message_two”, “This variable also does not change and is case sensitive”);<br>
+define (“message_three”, “This variable also does not change but is not case sensitive”, true);<br>
+</code>
+</p>
+<ul class="list">Operators:
+<li>Arithmetic:<code> + , - , * , / , % , **</code></li>
+<li>Assignment:<code> = , += , -= , *= , /= , %=</code></li>
+<li>Comparison: equal<code>==</code>, identical <code>===</code> , not equal <code>!=</code> or <code><></code>, not identical <code> !== , > , >= , < , <=</code></li>
+<li><ul class="list">
 Increment/decrement:
-pre-increment/decrement: ++$a/--$a - increments $a by one and then returns $a
-post-increment/decrement: $b++/$b-- - returns $b and then increments it by one
-Logical: and && , or || , not ! , xor (true if either side is true but not both)
-String: . concatenation , .= concatenation assignment
-Array:
-+ (union),
-== (equality - returns true if have the same key/value pairs),
-=== (identity - returns true if have the same key/value pairs in the same order and of the same types),
-!= (inequality - return true if not equal) or <>
-!== (non-identity - returns true if not identical)
+<li>
+pre-increment/decrement: <code>++$a/--$a</code> - increments $a by one and then returns $a</li>
+post-increment/decrement: <code>$b++/$b--</code> - returns $b and then increments it by one</li>
+</ul>
+</li>
+<li>Logical: <code>and && , or || , not ! , xor (true if either side is true but not both)</code></li>
+<li>String:<code> . </code>concatenation , <code>.= </code>concatenation assignment</li>
+<li><code></code></li>
+<li><ul class="list">Array:
+<li><code>+</code> (union),</li>
+<li><code>==</code> (equality - returns true if have the same key/value pairs),</li>
+<li><code>===</code> (identity - returns true if have the same key/value pairs in the same order and of the same types),</li>
+<li><code>!=</code> (inequality - return true if not equal) or <></li>
+<li><code>!==</code> (non-identity - returns true if not identical)</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
 Loops:
 ‘while’ - will check condition before executing the code where ‘do.. while’ loop will execute code once and then check condition.
 
